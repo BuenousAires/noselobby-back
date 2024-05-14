@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /noselobby
+
+
+spring:
+  profiles:
+    active: dev
+
+  redis:
+    database: 0
+    host: 8.140.240.201
+    port: 6379
+    password: Haomu12#$%
+    lettuce:
+      pool:
+        min-idle: 8
+        max-idle: 500
+        max-active: 2000
+        max-wait: 10000
+    timeout: 18000
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    druid:
+      url: jdbc:mysql://8.140.240.201:3306/noselobby?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+      username: root
+      password: Haomu12#$%

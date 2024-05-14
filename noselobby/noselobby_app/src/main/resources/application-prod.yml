@@ -1,0 +1,15 @@
+# 自定义配置
+my:
+  properties:
+    filePath:
+      imageFileRootPath: /home/noselobby/img/ # 静态图片的本地路径
+
+logging:
+  level:
+    root: warn
+    com.yu: warn
+  # 可以日志文件的指定完整的路径 不指定路径在当前项目下生成springboot.log日志
+  path: /home/noselobby/log
+  file:
+    max-size: 10MB # 日志归档的最大大小, 到了该大小就压缩打包
+    max-history: 10 # 最多保存日志归档文件的数量
