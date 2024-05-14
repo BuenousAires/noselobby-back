@@ -5,6 +5,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @Service
@@ -49,6 +51,11 @@ public class RedisService {
         }
     }
 
+    // 获取keys
+    public Set<String> getKeys(String keyPattern) {
+        return redisTemplate.keys(keyPattern);
+    }
+
     /**
      * 判断hash表中是否有该项的值
      *
@@ -59,4 +66,34 @@ public class RedisService {
     public boolean hHasKey(String key, String item) {
         return redisTemplate.opsForHash().hasKey(key, item);
     }
+
+    public <T> boolean set(String key, T value) {
+        try {
+            redisTemplate.opsForValue().set(key, value);
+            return true;
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+            return false;
+        }
+    }
+
+    /**
+     * 普通缓存放入并设置时间
+     *
+     * @param time 时间(秒) time要大于0 如果time小于等于0 将设置无限期
+     */
+    public <T> boolean set(String key, T value, long time) {
+        try {
+            if (time > 0) {
+                redisTemplate.opsForValue().set(key, value, time, TimeUnit.SECONDS);
+            } else {
+                set(key, value);
+            }
+            return true;
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+            return false;
+        }
+    }
+
 }

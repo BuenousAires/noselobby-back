@@ -1,4 +1,4 @@
-package com.haomu.app.common.util;
+package com.haomu.common.common.util.spring;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

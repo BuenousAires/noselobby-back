@@ -6,8 +6,8 @@ import com.haomu.app.modules.entity.User;
 import com.haomu.app.modules.entity.form.LoginByWeixinForm;
 import com.haomu.app.modules.entity.form.UpdateUserForm;
 import com.haomu.app.modules.service.UserServiceImpl;
-import com.yu.common.common.exception.ServiceException;
-import com.yu.common.common.util.result.Result;
+import com.haomu.common.common.exception.ServiceException;
+import com.haomu.common.common.util.result.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 

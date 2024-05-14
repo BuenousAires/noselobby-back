@@ -1,4 +1,4 @@
-package com.haomu.common.common.result;
+package com.haomu.common.common.util.result;
 
 import lombok.Data;
 

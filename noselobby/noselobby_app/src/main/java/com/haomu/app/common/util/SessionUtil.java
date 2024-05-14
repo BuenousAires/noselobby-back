@@ -2,15 +2,15 @@ package com.haomu.app.common.util;
 
 
 import com.haomu.app.modules.entity.User;
-import com.yu.common.common.constant.Const;
-import com.yu.common.common.exception.ServiceException;
-import com.yu.common.service.RedisService;
+import com.haomu.common.common.constant.Const;
+import com.haomu.common.common.exception.ServiceException;
+import com.haomu.common.service.RedisService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static com.haomu.app.common.util.SpringContextUtil.getBeanByClass;
+import static com.haomu.common.common.util.spring.SpringContextUtil.getBeanByClass;
 
 @Slf4j
 public class SessionUtil {

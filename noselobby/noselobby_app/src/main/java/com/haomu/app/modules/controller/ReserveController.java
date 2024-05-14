@@ -4,7 +4,7 @@ import com.haomu.app.common.annotation.NeedLogin;
 import com.haomu.app.common.util.SessionUtil;
 import com.haomu.app.modules.entity.form.CommitReserveForm;
 import com.haomu.app.modules.service.ReserveServiceImpl;
-import com.yu.common.common.util.result.Result;
+import com.haomu.common.common.util.result.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

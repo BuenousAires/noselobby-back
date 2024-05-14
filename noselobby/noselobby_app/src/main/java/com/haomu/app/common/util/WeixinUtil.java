@@ -2,7 +2,7 @@ package com.haomu.app.common.util;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.yu.common.common.constant.Const;
+import com.haomu.common.common.constant.Const;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

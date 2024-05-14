@@ -2,11 +2,13 @@ package com.haomu.system.modules.auth.controller;
 
 import com.haomu.common.common.constant.Const;
 import com.haomu.common.common.exception.ServiceException;
-import com.haomu.common.common.util.result.Result;
+import com.haomu.common.common.util.spring.SpringContextUtil;
 import com.haomu.common.service.RedisService;
+import com.haomu.common.common.util.result.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.Base64Utils;
 import org.springframework.util.FastByteArrayOutputStream;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,6 +30,8 @@ public class VerifyCodeController {
     @Resource
     private RedisService redisService;
 
+    // 验证码
+    @GetMapping("/code")
     public Result<HashMap<String, String>> getVerifyCodeImage(HttpServletRequest response) throws ServiceException, IOException{
         String uuid = UUID.randomUUID().toString();
         BufferedImage image = createVerifyCodeImage(uuid);
