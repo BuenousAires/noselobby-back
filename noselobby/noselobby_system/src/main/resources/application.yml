@@ -1,7 +1,7 @@
 server:
   port: 9101
   servlet:
-    context-path: /noselobbay-admin-api
+    context-path: /noselobby-admin-api
 
 # mybatis-plus配置
 mybatis-plus:
@@ -15,7 +15,7 @@ mybatis-plus:
 
 spring:
   profiles:
-    active: prod
+    active: dev
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
