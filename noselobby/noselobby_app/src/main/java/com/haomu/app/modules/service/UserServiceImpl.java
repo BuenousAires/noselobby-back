@@ -3,7 +3,6 @@ package com.haomu.app.modules.service;
 
 import com.haomu.app.common.util.SessionUtil;
 import com.haomu.app.common.util.WeixinUtil;
-import com.haomu.app.modules.entity.User;
 import com.haomu.app.modules.entity.form.LoginByWeixinForm;
 import com.haomu.app.modules.entity.form.UpdateUserForm;
 import com.haomu.app.modules.mapper.UserMapper;

@@ -1,7 +1,8 @@
 package com.haomu.app.common.config.mvc;
 
-import com.haomu.app.common.config.property.IOProperty;
+
 import com.haomu.app.common.interceptor.AppApiInterceptor;
+import com.haomu.common.common.config.property.IOProperty;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;

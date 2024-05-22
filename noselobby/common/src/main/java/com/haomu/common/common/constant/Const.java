@@ -21,6 +21,8 @@ public class Const {
     public static final String CONST_token = "token";
     // 微信openid
     public static final String CONST_wx_openid = "wxOpenid";
+    // sysUserId
+    public static final String CONST_sys_user_id = "sysUserId";
 
     //********************* redis变量前缀 ***************************//
     // 验证码
@@ -29,4 +31,6 @@ public class Const {
     //************************ 缓存变量名称 ***************************//
     // 用户会话缓存
     public static final String CONST_user_session_map = "user_session_map";
+    // 管理员会话缓存
+    public static final String CONST_sys_user_session_map = "sys_user_session_map";
 }

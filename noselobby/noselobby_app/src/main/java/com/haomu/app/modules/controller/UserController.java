@@ -2,7 +2,6 @@ package com.haomu.app.modules.controller;
 
 import com.haomu.app.common.annotation.NeedLogin;
 import com.haomu.app.common.util.SessionUtil;
-import com.haomu.app.modules.entity.User;
 import com.haomu.app.modules.entity.form.LoginByWeixinForm;
 import com.haomu.app.modules.entity.form.UpdateUserForm;
 import com.haomu.app.modules.service.UserServiceImpl;

@@ -28,4 +28,13 @@ public class ServiceException extends Exception{
             new ServiceException("用户未登录", 10001);
     public final static ServiceException CONST_token_is_not_validate =
             new ServiceException("token无效或已过期", 10001);
+
+    // ******************************************************* //
+    // ************************ 后台 服务异常 ****************** //
+    // ******************************************************* //
+    public final static ServiceException CONST_login_failed =
+            new ServiceException("账号不存在或密码错误");
+
+    public final static ServiceException CONST_not_authorized =
+            new ServiceException("权限不足", 10002);
 }

@@ -1,4 +1,4 @@
-package com.haomu.system.modules.system.entity;
+package com.haomu.system.modules.system.entity.dto;
 
 import com.haomu.common.entity.system.SysUser;
 import lombok.Data;

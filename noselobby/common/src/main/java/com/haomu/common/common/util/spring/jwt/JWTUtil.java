@@ -1,4 +1,4 @@
-package com.haomu.app.common.util;
+package com.haomu.common.common.util.spring.jwt;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
@@ -7,7 +7,6 @@ import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
-
 import com.haomu.common.common.exception.ServiceException;
 import lombok.extern.slf4j.Slf4j;
 
@@ -50,6 +49,30 @@ public class JWTUtil {
         try {
             DecodedJWT jwt = JWT.decode(token);
             return jwt.getClaim("wxOpenid").asString();
+        } catch (JWTDecodeException e) {
+            log.error("error：{}", e.getMessage());
+            throw ServiceException.CONST_token_is_not_validate;
+        }
+    }
+
+    // ************************* 后台管理员认证 ********************** //
+    public static String generateTokenWithUserId(Integer userId, long expireTime) {
+        try {
+            return JWT.create()
+                    .withClaim("userId", userId)
+                    .withExpiresAt(new Date(expireTime))
+                    .sign(Algorithm.HMAC256(COSNT_jwt_secret));
+        } catch (Exception e) {
+            log.error("error：{}", e.getMessage());
+            return null;
+        }
+    }
+
+    // 从 token中获取用户id
+    public static Integer getSysUserId(String token) throws ServiceException {
+        try {
+            DecodedJWT jwt = JWT.decode(token);
+            return jwt.getClaim("userId").asInt();
         } catch (JWTDecodeException e) {
             log.error("error：{}", e.getMessage());
             throw ServiceException.CONST_token_is_not_validate;

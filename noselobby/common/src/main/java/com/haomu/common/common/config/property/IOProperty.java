@@ -1,4 +1,4 @@
-package com.haomu.app.common.config.property;
+package com.haomu.common.common.config.property;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

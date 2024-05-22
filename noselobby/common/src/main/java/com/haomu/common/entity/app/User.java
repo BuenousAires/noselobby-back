@@ -1,4 +1,4 @@
-package com.haomu.app.modules.entity;
+package com.haomu.common.entity.app;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -13,7 +13,7 @@ public class User {
     private String telNumber;
     private Boolean status;
 
-
     @TableField(exist = false)
     private String token; // 认证令牌，在缓存会话信息的时候生成
+
 }
