@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication(scanBasePackages = {"com.haomu.app"})
+@SpringBootApplication(scanBasePackages = {"com.haomu"})
 @MapperScan("com.haomu.**.mapper")
 @RestController
 public class NoselobbyAppApplication {

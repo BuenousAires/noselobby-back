@@ -8,6 +8,7 @@ import com.haomu.app.modules.entity.form.UpdateUserForm;
 import com.haomu.app.modules.mapper.UserMapper;
 
 import com.haomu.common.common.exception.ServiceException;
+import com.haomu.common.entity.app.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

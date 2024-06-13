@@ -5,6 +5,7 @@ import com.haomu.common.common.constant.Const;
 import com.haomu.common.common.exception.ServiceException;
 import com.haomu.common.common.util.GeneratorUtil;
 import com.haomu.common.common.util.spring.jwt.JWTUtil;
+import com.haomu.common.entity.app.User;
 import com.haomu.common.service.RedisService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
